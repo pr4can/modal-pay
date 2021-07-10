@@ -250,6 +250,11 @@ body {
 	border-radius: 15px 15px 0 0;
 }
 
+.choose__item:nth-child(3) .choose__label {
+	border-top: none;
+	border-bottom: none;
+}
+
 .choose__item:last-child .choose__label {
 	border-top: none;
 	border-radius: 0 0 15px 15px;
