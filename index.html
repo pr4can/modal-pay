@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Testform</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+	<link rel="stylesheet" href="css/style.css">	
+</head>
+<body>
+	<div class="container">
+		<div class="modal">
+			<div class="modal-status modal-status-success">
+				<div class="modal__title">Successfull payment</div>
+				<div class="modal__subtitle">Your request has been accepted and will be processed within 24 working hours. We will send you a payment details and all information to your email.</div>
+				<div class="modal-status__img"><img src="img/success.svg" alt=""></div>
+				<button class="modal__submit modal__submit-status">Back</button>
+			</div>
+			<div class="modal-status modal-status-error">
+				<div class="modal__title">Your payment failed</div>
+				<div class="modal__subtitle">Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.</div>
+				<div class="modal-status__img"><img src="img/error.svg" alt=""></div>
+				<button class="modal__submit modal__submit-status">Try to pay again</button>
+			</div>			
+			<form id="form" action="/" class="modal__form">
+				<div class="modal__container" data-simplebar>
+					<div class="modal__item modal__item-form">
+						<div class="modal__title">Info</div>
+						<div class="modal__subtitle">Enter your email address</div>
+						<input class="modal__input" type="email" placeholder="team@checkforpatent.com" required>
+					</div>
+					<div class="modal__products">
+						<div class="modal__item modal__item-form modal__item-product" data-cost="24.99">
+							<div class="modal__title">Product 1</div>
+							<div class="modal__subtitle">Enter main keyword for the product</div>
+							<input class="modal__input" type="text" placeholder="for example, sylicon wine cup" required>
+							<div class="modal__subtitle">Enter link to the similar product as a reference</div>
+							<input class="modal__input" type="text" placeholder="https://..." required>
+						</div>		
+					</div>								
+					<div class="modal__item modal__item-more">
+						<div class="modal__title modal__title-more">Add more products <img src="img/icon_add.svg" alt=""></div>
+						<div class="modal__subtitle modal__subtitle-more">We offer discount up to 36% for multiple checks</div>
+					</div>
+				</div>				
+				<button class="modal__submit" type="submit">Submit and Pay&nbsp;<span>24.99 USD</span></button>
+				<div class="modal__secure"><img src="img/lock.svg" alt="">Secure payment with Stripe</div>
+			</form>
+			<div class="new-products">
+				<div class="new-products__title modal__title">Adding more products</div>
+				<div class="new-products__subtitle modal__subtitle">The more items you check, the better the price.</div>
+				<div class="new-produces__choose choose">
+					<div class="choose__item">
+						<input id="choose-5" class="choose__input" type="radio" name="count-product" value="choose-5" checked>
+						<label for="choose-5" class="choose__label">
+							<span class="choose__title">5 products for 80 usd / 16$ for each</span>
+							<span class="choose__subtitle">You safe 36% on each patent check</span>
+						</label>
+					</div>
+					<div class="choose__item">
+						<input id="choose-4" class="choose__input" type="radio" name="count-product" value="choose-4">
+						<label for="choose-4" class="choose__label">
+							<span class="choose__title">4 products for 72 usd / 18$ for each</span>
+							<span class="choose__subtitle">You safe 28% on each patent check</span>
+						</label>
+					</div>
+					<div class="choose__item">
+						<input id="choose-3" class="choose__input" type="radio" name="count-product" value="choose-3">
+						<label for="choose-3" class="choose__label">
+							<span class="choose__title">3 products for 60 usd / 20$ for each</span>
+							<span class="choose__subtitle">You safe 20% on each patent check</span>
+						</label>
+					</div>
+					<div class="choose__item">
+						<input id="choose-2" class="choose__input" type="radio" name="count-product" value="choose-2">
+						<label for="choose-2" class="choose__label">
+							<span class="choose__title">2 products for 44 usd / 22$ for each</span>
+							<span class="choose__subtitle">You safe 12% on each patent check</span>
+						</label>
+					</div>
+					<div class="choose__item">
+						<input id="choose-1" class="choose__input" type="radio" name="count-product" value="choose-1">
+						<label for="choose-1" class="choose__label">
+							<span class="choose__title">1 product for 24.99 usd</span>
+						</label>
+					</div>
+				</div>
+				<button class="new-products__submit">Continue</button>
+			</div>	
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
